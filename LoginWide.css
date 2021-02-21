@@ -6,6 +6,6 @@
     background-image: var(--lwc-LoginBackgroundImage);
 }
 
-.THIS .salesforceIdentityCommunityLogo2.communityLogoContainer {
-    width: var(--CompanyLogoWidth) px;
+.THIS .salesforceIdentityCommunityLogo2 .communityLogo {
+    width: var(--CompanyLogoWidth) px !important;
 }
