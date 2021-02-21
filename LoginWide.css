@@ -1,0 +1,11 @@
+.THIS {
+}
+
+.THIS .background {
+    background-color: var(--lwc-LoginBackgroundColor);
+    background-image: var(--lwc-LoginBackgroundImage);
+}
+
+.THIS .salesforceIdentityCommunityLogo2.communityLogoContainer {
+    width: var(--CompanyLogoWidth) px;
+}

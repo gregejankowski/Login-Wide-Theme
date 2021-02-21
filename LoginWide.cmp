@@ -1,0 +1,47 @@
+<!-- LoginWide component - Allow for the width to be set and still use the login page background color and image, if set.
+     2/16/21 - Find and set the background color and image. Allow set company logo width.
+-->
+<aura:component implements="forceCommunity:themeLayout" access="global" description="Wide Login Pages Layout">
+<aura:attribute name="LoginFooter" type="Aura.Component[]" required="false"/>  
+<aura:attribute name="LoginHeader" type="Aura.Component[]" required="false"/>
+<aura:attribute name="LoginBackground" type="Boolean" required="false"/>
+<aura:attribute name="LoginBackgroundImage" type="Boolean" required="false"/>
+<aura:attribute name="MaxPageWidth" type="Integer" default="1280" required="false"/>
+<aura:attribute name="MaxContentWidth" type="Integer" default="640" required="false"/>  
+<aura:attribute name="CompanyLogoWidth" type="Integer" required="false"/>  
+<aura:attribute name="FooterBackgroundColor" type="String" default="#100100100" required="false"/>
+<aura:attribute name="HeaderBackgroundColor" type="String" default="#100100100" required="false"/>
+
+<!--   
+1) FIX - Use sysytem varables
+    background-color: var(- -lwc-LoginBackgroundColor);
+    background-image: var(- -lwc-LoginBackgroundImage);
+     background-image:'+ v.lwc-LoginBackgroundImage +';
+style="{!'background-color:'+ - -lwc-LoginBackgroundColor +';'}
+
+2) FIX - Make backgropund a pulldown selection (none, image or color)
+
+3) Fix Add max width for comunity logo
+.salesforceIdentityCommunityLogo2 .communityLogo {max-width: 100px;}
+-->
+
+    <div style="{!'background-color:'+ v.lwc-LoginBackgroundColor +';'}">
+        <!-- Header section -->
+        <div style="{!'background-color:'+ v.HeaderBackgroundColor}">
+            <div style="{!'margin:auto;  max-width:'+ v.MaxPageWidth +'px;'}">
+                {!v.LoginHeader}
+            </div>
+        </div>
+        <!-- Body -->		
+        <div style="{!'margin:auto; max-width:'+ v.MaxContentWidth +'px;'}">
+            <p>Company Logo Width = {!v.CompanyLogoWidth}</p>
+            {!v.body}
+        </div>
+        <!-- Footer Section -->
+        <div style="{!'background-color:'+ v.FooterBackgroundColor +';'}">
+            <div style="{!'margin:auto; max-width:'+ v.MaxPageWidth +'px;'}">
+                {!v.LoginFooter}
+            </div>
+        </div>
+    </div>
+</aura:component>

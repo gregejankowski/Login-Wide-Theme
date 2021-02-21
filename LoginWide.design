@@ -1,0 +1,10 @@
+<design:component label="Wide Login Layout">
+    <design:attribute name="BackgroundType" label="Type of Login pages background" datasource="None,Color,Image"/>
+    <design:attribute name="LoginBackground" label="Use branding Login Pages background color" description="Select whether to use the default brand login page background color"/>
+    <design:attribute name="LoginBackgroundImage" label="Use branding Login Pages image" description="Select whether to use the default brand login page image (covers the background color)"/>
+    <design:attribute name="MaxPageWidth" label="Max header/footer width (px)" description="Set the max width for the header/footer content sections."/>
+    <design:attribute name="MaxContentWidth" label="Max content width (px)" description="Set the max width of the flexible body section." />
+    <design:attribute name="CompanyLogoWidth" label="Set Company Logo width (px)" description="Set the width for the Company Logo component." />
+    <design:attribute name="HeaderBackgroundColor" label="Header background color (#HEX)" description="Set the background color for the entire header in #HEX."/>
+    <design:attribute name="FooterBackgroundColor" label="Footer background color (#HEX)" description="Set the background color for the entire footer in #HEX."/>
+</design:component>
